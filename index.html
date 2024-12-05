@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع زواج شباب موريتانيا</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>مرحبًا بكم في موقع زواج شباب موريتانيا</h1>
+        <p>ابحث عن شريك حياتك بأسلوب سهل وآمن</p>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#register">التسجيل</a>
+            <a href="#profiles">الأعضاء</a>
+            <a href="#search">البحث</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- الصفحة الرئيسية -->
+        <section id="home">
+            <h2>لماذا موقعنا؟</h2>
+            <p>موقعنا يوفر بيئة آمنة ومناسبة للبحث عن شريك الحياة المثالي.</p>
+            <button onclick="location.href='#register'">ابدأ الآن</button>
+        </section>
+
+        <!-- صفحة التسجيل -->
+        <div class="register-container" id="register">
+            <h2>التسجيل في الموقع</h2>
+        
+            <form id="registration-form">
+                <div class="gender-selection">
+                    <label for="gender">اختر جنسك:</label>
+                    <select id="gender" name="gender" onchange="showGenderQuestions()">
+                        <option value="">اختر</option>
+                        <option value="male">رجل</option>
+                        <option value="female">امرأة</option>
+                    </select>
+                </div>
+        
+                <div class="personal-info">
+                    <label for="name">الاسم:</label>
+                    <input type="text" id="name" name="name" required placeholder="ادخل اسمك">
+        
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="ادخل رقم هاتفك">
+        
+                    <label for="age">العمر:</label>
+                    <input type="number" id="age" name="age" required placeholder="ادخل عمرك" min="18">
+        
+                    <label for="city">المدينة:</label>
+                    <input type="text" id="city" name="city" required placeholder="ادخل المدينة التي تسكن فيها">
+        
+                    <label for="region">هل أنت من أهل:</label>
+                    <select id="region" name="region" required>
+                        <option value="">اختر</option>
+                        <option value="shirk">أهل الشرك</option>
+                        <option value="kabla">أهل الكبله</option>
+                        <option value="sahil">أهل الساحل</option>
+                    </select>
+        
+                    <label for="favorite-food">ما هي الوجبة التي تحبها؟</label>
+                    <select id="favorite-food" name="favorite-food" required>
+                        <option value="">اختر</option>
+                        <option value="couscous">كسكس</option>
+                        <option value="fish">الحوت</option>
+                        <option value="marou-besmti">مارو بسمتي</option>
+                        <option value="marou-maf">مارو ماف</option>
+                    </select>
+                </div>
+        
+                <div id="male-questions" class="gender-questions hidden">
+                    <h3>أسئلة للرجال</h3>
+                    <p>ما هي الصفات التي تبحث عنها في المرأة؟</p>
+                    <textarea name="male-description" rows="4" placeholder="أدخل إجابتك هنا"></textarea>
+                </div>
+        
+                <div id="female-questions" class="gender-questions hidden">
+                    <h3>أسئلة للنساء</h3>
+                    <p>ما هي الصفات التي تبحثين عنها في الرجل؟</p>
+                    <textarea name="female-description" rows="4" placeholder="أدخل إجابتك هنا"></textarea>
+                </div>
+        
+                <button type="submit" id="submit-btn">تسجيل</button>
+            </form>
+        
+            <div id="thank-you-message" class="hidden">
+                <h2>شكراً لك على التسجيل!</h2>
+                <p>تم التسجيل بنجاح. نتمنى لك التوفيق في بحثك عن شريك الحياة.</p>
+            </div>
+        </div>
+        
+        
+
+        <!-- صفحة عرض الأعضاء -->
+        <section id="profiles">
+            <h2>الأعضاء</h2>
+            <div class="profile">
+                <h3>يحي </h3>
+                <p>العمر: 22 سنة</p>
+                <p>الهوايات: مافات عرفه  </p>
+                <button>إرسال رسالة</button>
+            </div>
+            <div class="profile">
+                <h3>العزة منت الشيخ اياه</h3>
+                <p>العمر: 55 سنة</p>
+                <p>الهوايات: الطبخ، السفر</p>
+                <button>إرسال رسالة</button>
+            </div>
+        </section>
+
+        <!-- صفحة البحث -->
+        <section id="search">
+            <h2>البحث عن شريك حياتك</h2>
+            <form id="search-form">
+                <label>الجنس:</label>
+                <select>
+                    <option value="male">رجل</option>
+                    <option value="female">امرأة</option>
+                </select>
+
+                <label for="age">العمر:</label>
+<input type="number" id="age" placeholder="أدخل العمر المطلوب" required />
+
+<label for="location">الموقع:</label>
+<input type="text" id="location" placeholder="مثلاً: نواكشوط" required />
+
+<label for="traits">الصفات:</label>
+<input type="text" id="traits" placeholder="أدخل الصفات المطلوبة" required />
+
+<button id="search-btn">بحث</button>
+
+                
+                
+            </form>
+        </section>
+    </main>
+
+    <div id="stories-container">
+        <h2>قصص نجاح في الزواج</h2>
+    
+        <div class="story">
+            <h3>قصة محمد وفاطمة</h3>
+            <p>
+                التقى محمد وفاطمة عبر موقعنا، وكانت المواصفات التي يبحثان عنها متطابقة تمامًا. بعد محادثات طويلة مليئة بالاحترام والتفاهم، قررا أن يلتقيا رسميًا. اليوم هما سعيدان جدًا بزواجهما ويشكران الموقع لأنه جمع بينهما.
+            </p>
+        </div>
+    
+        <div class="story">
+            <h3>قصة أحمد وسعاد</h3>
+            <p>
+                أحمد كان يبحث عن شريكة حياة طموحة ومحبة للعلم، وسعاد كانت تبحث عن شخص يدعمها في مسيرتها. من خلال موقعنا، تعارفا وبدأت قصة حب مبنية على الثقة والاحترام المتبادل. والآن هما يعملان معًا على بناء أسرة سعيدة.
+            </p>
+        </div>
+    
+        <div class="story">
+            <h3>قصة علي ونور</h3>
+            <p>
+                نور كانت مترددة في التسجيل في الموقع، لكنها قررت أن تعطي نفسها فرصة. علي كان يبحث عن شريكة متفهمة وطيبة. بفضل الموقع، تعارفا ووجد كل منهما في الآخر ما كان يحلم به. هما الآن يعيشون حياة مليئة بالحب والسعادة.
+            </p>
+        </div>
+    </div>
+    
+
+    <footer>
+        <p>&copy; 2024 موقع زواج شباب موريتانيا. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

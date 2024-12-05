@@ -1,0 +1,540 @@
+/* styles.css */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9f6f2, #fdeae9);
+    color: #444;
+    text-align: center;
+}
+
+.header {
+    background: linear-gradient(135deg, #d35400, #e74c3c);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.header p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.header nav {
+    margin: 15px 0;
+}
+
+.header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: #f1c40f;
+}
+
+main section {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+main section h2 {
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+main section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+button {
+    background: #e74c3c;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+form label {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+form input, form select, form textarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 4px rgba(231, 76, 60, 0.5);
+}
+
+form button {
+    background: linear-gradient(135deg, #e74c3c, #d35400);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+form button:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+    background: #fdf3f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile h3 {
+    font-size: 1.5rem;
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #555;
+}
+
+.profile button {
+    background: #27ae60;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.profile button:hover {
+    background: #229954;
+    transform: translateY(-2px);
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* تنسيق عام للموقع */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* تنسيق الحاوية الخاصة بالقصص */
+#stories-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* عنوان القسم */
+#stories-container h2 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* تنسيق كل قصة */
+.story {
+    background-color: #fafafa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير عند التمرير على القصة */
+.story:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* عنوان كل قصة */
+.story h3 {
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+/* نص كل قصة */
+.story p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+    text-align: justify;
+}
+
+/* إضافة صورة صغيرة جميلة في الأعلى - اختياري */
+.story::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: #4CAF50;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+/* تنسيق عام */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* الحاوية الرئيسية للتسجيل */
+.register-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* التنسيق للأسئلة */
+.gender-selection {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gender-selection label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.gender-selection select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    outline: none;
+}
+
+.gender-selection select:focus {
+    border-color: #4CAF50;
+}
+
+/* تنسيق الحقول */
+.personal-info label {
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.personal-info input,
+.personal-info select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.personal-info input:focus,
+.personal-info select:focus {
+    border-color: #4CAF50;
+}
+
+/* تنسيق الأسئلة الخاصة بالجنس */
+.gender-questions {
+    display: none;
+}
+
+.gender-questions h3 {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.gender-questions textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    resize: vertical;
+}
+
+.gender-questions textarea:focus {
+    border-color: #4CAF50;
+}
+
+/* زر التسجيل */
+#submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* الرسالة بعد التسجيل */
+#thank-you-message {
+    display: none;
+    text-align: center;
+}
+
+#thank-you-message h2 {
+    color: #4CAF50;
+    font-size: 28px;
+}
+
+#thank-you-message p {
+    font-size: 18px;
+    color: #333;
+}
+
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+
+    .navigation a{
+        padding-left: 10px;
+    }
+
+    .title{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+     
+    }
+}
+
+
+
+ #team {
+    padding: 50px;
+    background-color: #f1f1f1;
+  }
+  
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+  }
+  
+  .team-member {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    display: block;
+  }
+  
+  .logo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #007bff;
+  }
+  
+  .logo-overlay img {
+    width: 60%;
+  }
+  
+  h3 {
+    margin: 10px 0 5px;
+    font-size: 1.3rem;
+    color: #007bff;
+  }
+  
+  .role {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .bio {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    header p {
+      font-size: 1rem;
+    }
+  }
